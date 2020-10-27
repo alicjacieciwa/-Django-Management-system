@@ -1,0 +1,116 @@
+body, html
+{
+  height: 100%;
+
+  position: absolute;
+  margin: 0px;
+  overflow: hidden;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.bg
+{
+  /* The image used */
+  background-image: url("../img/background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+
+  background-image: url("../img/background.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 360px;
+  padding: 30px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.7);
+  margin-top: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+footer {
+    color: #123123;
+    text-align: center;
+    margin: auto;
+}
+
+/* unvisited link */
+a:link{
+    color: #03B915;
+}
+
+/* visited link */
+a:visited {
+  color: #01A711;
+}
+
+/* mouse over link */
+a:hover {
+  color: #03FC1B;
+}
+
+/* selected link */
+a:active {
+  color: #01A711;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+    overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
