@@ -1,51 +1,21 @@
-body, html
-{
-  height: 100%;
-
-  position: absolute;
-  margin: 0px;
-  overflow: hidden;
-  top: 0px;
-  bottom: 0px;
-  width: 100%;
-}
-
-.bg
-{
-  /* The image used */
-  background-image: url("../img/background.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-
-
-
-
-
-
-
-body {
+body,html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 40px;
   background-color: #f5f5f5;
-
   background-image: url("../img/background.jpg");
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+  position: absolute;
+  margin: 0px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 90px;
 }
 
 .form-signin {
@@ -54,7 +24,7 @@ body {
   padding: 20px;
   margin: auto;
   background-color: rgba(255,255,255,0.7);
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .form-signin .checkbox {
@@ -99,9 +69,16 @@ a:active {
 
 .container {
     height: 100%;
+    width: 100%;
     align-content: center;
     overflow: scroll;
 }
+/*
+@media (max-width: 979px) {
+  .container {
+    padding-top: 0px;
+  }
+}*/
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .container::-webkit-scrollbar {
@@ -112,4 +89,36 @@ a:active {
 .container {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* navigation */
+.bg-nav{
+    background-color: rgba(255,255,255,0.7);
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 20;
+    margin-top: 0px; !important;
+}
+
+.form-hours {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.7);
+  margin-top: 10px;
+}
+
+.form-hours .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
 }

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      {% if user.is_authenticated %}
+      Zalogowany: {{ user.username }} &nbsp;
+      <p><a href="{% url 'login' %}">Wyloguj</a></p> <br>
+      {% endif %}
+    </div>
+
+<!--  form to input working hours-->
+    <div class="row">
+      <div class="form-hours">
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="btn btn-lg btn-success btn-block" type="submit">Dodaj</button>
+        </form>
+      </div>
+    </div>
+</div>
+{% endblock %}
