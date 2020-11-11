@@ -4,6 +4,7 @@ from work.forms import HoursInputForm
 
 
 def get_basic_workdata(request):
+    title = 'Rejestracja'
     if request.method == 'POST':
         form = HoursInputForm(request.POST)
         if form.is_valid():
@@ -11,5 +12,5 @@ def get_basic_workdata(request):
     else:
         form = HoursInputForm()
 
-    return render(request, 'inputhours.html', {'form': form})
+    return render(request, 'inputhours.html', {'form': form, 'title': title})
 

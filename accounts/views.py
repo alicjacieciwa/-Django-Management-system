@@ -3,6 +3,7 @@ from .forms import RegisterForm
 
 
 def register(response):
+    title = "Rejestracja"
     if response.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
@@ -10,4 +11,4 @@ def register(response):
         return redirect("/")
     else:
         form = RegisterForm()
-    return render(response, "registration/signup.html", {"form":form})
+    return render(response, "registration/signup.html", {"form": form, 'title': title})
