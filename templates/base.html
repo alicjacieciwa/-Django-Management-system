@@ -34,14 +34,14 @@
                     </li>
                     <!--Dodaj godziny-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dodaj godziny</a>
+                        <a class="nav-link" href="/">Dodaj godziny</a>
                     </li>
 
                     {% load auth_extras %}
                     {% if request.user|has_group:"moderators" %}
                     <!--Dodaj pracownika-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dodaj pracownika</a>
+                        <a class="nav-link" href="/register">Dodaj pracownika</a>
                     </li>
                     {% endif %}
 
