@@ -8,8 +8,8 @@ import datetime
 #     ('MS', 'Ms.'),
 # ]
 #
-# class HoursInput(models.Model):
-#     date = models.DateField(default=datetime.date.today)
-#     hours_number = models.IntegerField()
-#     # workplace = models.CharField(required=True, max_length=100, choices=TITLE_CHOICES)
-#
+class HoursInput(models.Model):
+    date = models.DateField(default=datetime.date.today)
+    hours_number = models.IntegerField()
+    workplace = models.CharField(max_length=100)
+
