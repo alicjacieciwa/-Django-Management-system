@@ -73,12 +73,6 @@ a:active {
     align-content: center;
     overflow: scroll;
 }
-/*
-@media (max-width: 979px) {
-  .container {
-    padding-top: 0px;
-  }
-}*/
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .container::-webkit-scrollbar {
@@ -121,4 +115,22 @@ a:active {
   height: auto;
   padding: 10px;
   font-size: 16px;
+}
+
+.nav-logout{
+  opacity: 0.7;
+  justify-content: flex-end;
+}
+
+.btn-logout{
+  margin-left: 10px;
+}
+
+a.btn-logout {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: #EDEDED;
 }
