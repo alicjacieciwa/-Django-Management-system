@@ -42,14 +42,14 @@
                         </li>
                         <!--Dodaj godziny-->
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Dodaj godziny</a>
+                            <a class="nav-link" href="{% url 'home' %}">Dodaj godziny</a>
                         </li>
 
                         {% load auth_extras %}
                         {% if request.user|has_group:"moderators" %}
                         <!--Dodaj pracownika-->
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">Dodaj pracownika</a>
+                            <a class="nav-link" href="{% url 'sign-up' %}">Dodaj pracownika</a>
                         </li>
                         {% endif %}
                     </ul>
@@ -62,7 +62,7 @@
 <!--                           <div class="text-right">-->
                                <img src="{% static 'img/usericon.png' %}" width="17" alt="user"
                                 class="d-inline-block mr-1"> {{ user.username }}
-                                <a href="{% url 'login' %}" class="btn btn-sm btn-secondary text-nowrap btn-logout">Wyloguj</a>
+                                <a href="{% url 'logout' %}" class="btn btn-sm btn-secondary text-nowrap btn-logout">Wyloguj</a>
 <!--                           </div>-->
                         {% endif %}
                        </li>

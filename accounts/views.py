@@ -1,14 +1,21 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 
-def register(response):
+@login_required
+def sign_up(request):
     title = "Rejestracja"
-    if response.method == "POST":
-        form = RegisterForm(response.POST)
+    form = UserCreationForm(request.POST or None)
+    if request.method == "POST":
         if form.is_valid():
-            form.save()
-        return redirect("/")
-    else:
-        form = RegisterForm()
-    return render(response, "registration/signup.html", {"form": form, 'title': title})
+            user = form.save()
+            return redirect("/")
+    return render(request, 'registration/signup.html', {"form": form, 'title': title})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('/accounts/login')
+
