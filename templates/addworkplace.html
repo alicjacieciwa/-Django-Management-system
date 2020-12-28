@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!--<div class="container">-->
+<!--  form to input working hours-->
+<!--    <div class="row">-->
+      <div class="form-hours">
+        <form method="post">
+          {% csrf_token %}
+          {{ form | crispy}}
+          <button class="btn btn-lg btn-success btn-block" type="submit">Dodaj</button>
+        </form>
+      </div>
+<!--    </div>-->
+<!--</div>-->
+{% endblock %}
