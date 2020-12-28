@@ -3,9 +3,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<!--<div class="container">-->
-<!--  form to input working hours-->
-<!--    <div class="row">-->
+<!--  form to input workplace  -->
       <div class="form-hours">
         <form method="post">
           {% csrf_token %}
@@ -13,6 +11,4 @@
           <button class="btn btn-lg btn-success btn-block" type="submit">Dodaj</button>
         </form>
       </div>
-<!--    </div>-->
-<!--</div>-->
 {% endblock %}

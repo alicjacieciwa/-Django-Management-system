@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!--  Show workplaces  -->
+<div class="table-view">
+    <a href="{% url 'addworkplace' %}">+ Dodaj pracę</a> <br><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Miejsca pracy</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for wp in workplaces.all %}
+            <tr>
+                <td>{{ wp.workplace }} <br></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

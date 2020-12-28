@@ -27,8 +27,15 @@ def addworkplace_view(request):
         form = WorkplaceInputForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/work/workplaces/')
     else:
         form = WorkplaceInputForm()
 
     return render(request, 'addworkplace.html', {'form': form, 'title': title})
+
+
+@login_required
+def show_workplaces(request):
+    title = "Prace"
+    workplaces = WorkplaceInput.objects
+    return render(request, 'workplaces.html', {'workplaces': workplaces, 'title': title})

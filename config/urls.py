@@ -28,5 +28,6 @@ urlpatterns = [
     path('accounts/sign_up/', accounts_views.sign_up, name='sign-up'),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', accounts_views.logout_view, name='logout'),
-    path('accounts/addworkplace/', work_views.addworkplace_view, name='addworkplace'),
+    path('work/addworkplace/', work_views.addworkplace_view, name='addworkplace'),
+    path('work/workplaces/', work_views.show_workplaces, name='workplaces'),
 ]
